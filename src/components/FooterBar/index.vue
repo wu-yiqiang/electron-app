@@ -1,24 +1,19 @@
 <template>
     <div class="footer-bar">
-        <div>接收</div>
-        <div>发送</div>
-        <div>设置</div>
+        <FooterBarItem titleName="接收" svgName="wifi"/>
+        <FooterBarItem titleName="接收" svgName="wifi"/>
+        <FooterBarItem titleName="接收" svgName="wifi"/>
     </div>
 </template>
 
 <script lang="ts" setup>
-
+import FooterBarItem from './FooterBarItem.vue';
 </script>
 
-<style>
+<style lang="scss">
 .footer-bar {
-    position: fixed;
-    bottom: 0;
-    height: 60px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: red;
+    height: 300px;
+    color: red;
 }
 </style>
