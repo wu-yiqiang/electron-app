@@ -13,5 +13,6 @@ import FooterBar from '@/components/FooterBar/index.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px; */
+  width: 100%;
 }
 </style>

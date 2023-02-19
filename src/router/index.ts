@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const Index = () => import("../index/index.vue");
-// const HelloWorld = () => import("../components/HelloWorld.vue");
 
 const routes: Array<RouteRecordRaw> = [
   {

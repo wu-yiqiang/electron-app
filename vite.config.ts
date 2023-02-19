@@ -47,6 +47,21 @@ export default defineConfig({
       }
     }
   },
+  // server: {
+  //   // 是否开启 https
+  //   https: true,
+  //   hmr: true,
+  //   // 端口号
+  //   port: 3002,
+  //   host: '0.0.0.0',
+  //   // 本地跨域代理
+  //   // proxy: {
+  //   //   '/api/v1': {
+  //   //     // target: VITE_APP_BASE_API,
+  //   //     // changeOrigin: true
+  //   //   }
+  //   // }
+  // },
   build: {
     emptyOutDir: false, // 默认情况下，若 outDir 在 root 目录下，则 Vite 会在构建时清空该目录
   },

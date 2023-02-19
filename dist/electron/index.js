@@ -118,6 +118,7 @@ class Window {
     }
     console.log("\u65B0\u7A97\u53E3\u5730\u5740:", winURL);
     win.loadURL(winURL);
+    win.webContents.openDevTools({ mode: "bottom" });
     win.once("ready-to-show", () => {
       win.show();
     });

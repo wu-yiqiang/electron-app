@@ -178,7 +178,8 @@ export class Window {
     }
     console.log("新窗口地址:", winURL);
     win.loadURL(winURL);
-
+    // 打开dev-tools
+    win.webContents.openDevTools({mode:'bottom'})
     win.once("ready-to-show", () => {
       win.show();
     });
@@ -281,5 +282,9 @@ export class Window {
 
     // 创建窗口
     ipcMain.on("window-new", (event: Event, args) => this.createWindows(args));
+    // // 打开开发者模式
+    // ipcMain.on("ipc:open-dev-tools", (event: Event, args) => {
+      
+    // });
   }
 }
