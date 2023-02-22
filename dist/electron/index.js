@@ -16,8 +16,8 @@ const windowsCfg = {
   title: "",
   width: null,
   height: null,
-  minWidth: null,
-  minHeight: null,
+  minWidth: 750,
+  minHeight: 750,
   route: "",
   resizable: true,
   maximize: false,
@@ -207,6 +207,9 @@ class Window {
       }
     });
     electron.ipcMain.on("window-new", (event, args) => this.createWindows(args));
+    electron.ipcMain.on("resizeEvent", (event, args) => {
+      resizeEvent(args);
+    });
   }
 }
 async function createWindow() {

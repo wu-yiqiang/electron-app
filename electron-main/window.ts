@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain, Menu, Tray } from "electron";
+import { tr } from "element-plus/es/locale";
 import path from "path";
 interface IWindowsCfg {
   id: number | null;
@@ -44,11 +45,11 @@ export const windowsCfg: IWindowsCfg = {
   title: "", //窗口标题
   width: null, //宽度
   height: null, //高度
-  minWidth: null, //最小宽度
-  minHeight: null, //最小高度
+  minWidth: 750, //最小宽度
+  minHeight: 750, //最小高度
   route: "", // 页面路由URL '/manage?id=123'
   resizable: true, //是否支持调整窗口大小
-  maximize: false, //是否最大化
+  maximize: false, //初始化是否最大化
   backgroundColor: "#eee", //窗口背景色
   data: null, //数据
   isMultiWindow: false, //是否支持多开窗口 (如果为false，当窗体存在，再次创建不会新建一个窗体 只focus显示即可，，如果为true，即使窗体存在，也可以新建一个)
@@ -282,9 +283,9 @@ export class Window {
 
     // 创建窗口
     ipcMain.on("window-new", (event: Event, args) => this.createWindows(args));
-    // // 打开开发者模式
-    // ipcMain.on("ipc:open-dev-tools", (event: Event, args) => {
-      
-    // });
+    // 窗口大小改变
+    ipcMain.on("resizeEvent", (event: Event, args) => {
+      resizeEvent(args)
+    });
   }
 }

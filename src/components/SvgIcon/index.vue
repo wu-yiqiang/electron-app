@@ -7,17 +7,17 @@
 <script setup lang="ts">
 import { computed, defineProps } from 'vue'
 const props = defineProps({
-  name: {
+  name: { 
     type: String,
     required: true
   },
   color: {
     type: String,
-    default: ''
+    default: '#fff'
   },
   size: {
     type: String,
-    default: ''
+    default: '40'
   }
 })
 const iconName = computed(() => `#icon-${props.name}`)
