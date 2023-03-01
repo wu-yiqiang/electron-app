@@ -1,6 +1,6 @@
 <template>
   <section class="index">
-   vue3模板send
+   vue3模板jieshou
   </section>
 </template>
 <script lang="ts" setup>

@@ -1,9 +1,8 @@
 <template>
-  <router-view></router-view>
-  <FooterBar />
+  <Layout />
 </template>
 <script lang="ts" setup>
-import FooterBar from '@/components/FooterBar/index.vue'
+import Layout from '@/views/Layout/index.vue'
 </script>
 <style>
 #app {

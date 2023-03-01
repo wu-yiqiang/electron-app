@@ -1,6 +1,7 @@
 <template>
-  <section class="index">
-   vue3模板send
+  <section class="setting">
+  设置
+  sadadsadssds
   </section>
 </template>
 <script lang="ts" setup>
@@ -8,5 +9,7 @@ import { reactive, watch, computed, ref } from 'vue'
 
 </script>
 <style lang="scss" scoped>
-//.index{}
+.setting{
+  color: white;
+}
 </style>
