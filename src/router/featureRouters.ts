@@ -1,8 +1,8 @@
+import { RouterModel } from './RouterModels'
 const Receive = () => import('@/views/Receive/index.vue')
 const Send = () => import('@/views/Send/index.vue')
 const Setting = () => import('@/views/Setting/index.vue')
-
-export const featureRouters = [
+export const featureRouters: RouterModel[] = [
   {
     path: '/receive',
     name: '接收',
@@ -38,29 +38,65 @@ export const featureRouters = [
       TabbarShow: true
     },
     component: Setting
-  },
-  {
-    path: '/setting',
-    name: 'ka',
-    meta: {
-      title: 'setting',
-      icon: 'setting',
-      keepAlive: true,
-      requireAuth: true,
-      TabbarShow: false
-    },
-    component: Setting
-  },
-  {
-    path: '/setting',
-    name: 'dfs',
-    meta: {
-      title: 'setting',
-      icon: 'setting',
-      keepAlive: true,
-      requireAuth: true,
-      TabbarShow: false
-    },
-    component: Setting
   }
+  // {
+  //   path: '/setting',
+  //   name: 'ka',
+  //   meta: {
+  //     title: 'setting',
+  //     icon: 'setting',
+  //     keepAlive: true,
+  //     requireAuth: true,
+  //     TabbarShow: true
+  //   },
+  //   component: Setting
+  // },
+  // {
+  //   path: '/setting',
+  //   name: 'dfs',
+  //   meta: {
+  //     title: 'setting',
+  //     icon: 'setting',
+  //     keepAlive: true,
+  //     requireAuth: true,
+  //     TabbarShow: true
+  //   },
+  //   component: Setting
+  // },
+  // {
+  //   path: '/setting',
+  //   name: 'dfs',
+  //   meta: {
+  //     title: 'setting',
+  //     icon: 'setting',
+  //     keepAlive: true,
+  //     requireAuth: true,
+  //     TabbarShow: true
+  //   },
+  //   component: Setting
+  // },
+  // {
+  //   path: '/setting',
+  //   name: 'dfs',
+  //   meta: {
+  //     title: 'setting',
+  //     icon: 'setting',
+  //     keepAlive: true,
+  //     requireAuth: true,
+  //     TabbarShow: true
+  //   },
+  //   component: Setting
+  // },
+  // {
+  //   path: '/setting',
+  //   name: 'dfs',
+  //   meta: {
+  //     title: 'setting',
+  //     icon: 'setting',
+  //     keepAlive: true,
+  //     requireAuth: true,
+  //     TabbarShow: true
+  //   },
+  //   component: Setting
+  // }
 ]

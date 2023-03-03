@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { featureRouters } from "./featureRouters";
-import Layout from '@/views/Layout/index.vue'
 export const menus: Array<RouteRecordRaw> = featureRouters
 const routes: Array<RouteRecordRaw> = [
   // {
@@ -15,7 +14,6 @@ const routes: Array<RouteRecordRaw> = [
   // }
   {
     path: '/',
-    // component: Layout,
     redirect: '/send',
     children: menus
   }

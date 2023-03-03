@@ -11,9 +11,10 @@
 
 body {
     font-size      : 16px;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
+    // display        : flex;
+    // align-items    : center;
+    // justify-content: center;
+    padding: 20px;
     background     : #222;
     color          : #fff;
     overflow       : hidden;
@@ -21,7 +22,6 @@ body {
 }
 
 /* 设置水平垂直居中 */
-
 input {
     background    : none;
     border        : none;

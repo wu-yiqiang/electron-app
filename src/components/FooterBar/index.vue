@@ -11,16 +11,26 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import SvgIcon from '@/components/SvgIcon/index.vue'
 import { menus } from '@/router/index'
 import router from '@/router/index'
-const currIndex = ref(1)
+const currIndex = ref(0)
+const newIndex = ref(0)
+let tabbarLen = ref(0)
+let isEven = ref(0)
 const tabClick = (e, path) => {
   let { index } = e.currentTarget.dataset
   currIndex.value = index
   router.push(path)
 }
+onMounted(() => {
+  menus.forEach((v: Object) => {
+    if (v?.meta?.TabbarShow) tabbarLen.value++
+  });
+  isEven.value = tabbarLen.value % 2
+  console.log(typeof isEven.value)
+})
 </script>
 
 <style lang="scss">
@@ -29,8 +39,14 @@ const tabClick = (e, path) => {
   left: 0;
   bottom: 0;
   z-index: 1;
+  /* 导航栏个数 */
+  $--tn: v-bind(tabbarLen);
   /* 每个菜单的宽度 */
-  $--w: calc(100vw / 4);
+  $--w: calc(100vw / $--tn);
+  /* 每个菜单的宽度的一半 */
+  $--ww: calc(100vw / $--tn / 2);
+  /* 奇偶数 */
+  $--isEven: 0;
   // $--w: 120px;
   /* 页面总宽度 */
   $--t: 100vw;
@@ -67,7 +83,6 @@ const tabClick = (e, path) => {
       /* 添加过渡效果 */
       transition: all 0.5s;
     }
-
     .title-name-box {
       font-size: 20px;
       font-weight: bold;
@@ -103,7 +118,7 @@ const tabClick = (e, path) => {
     border-radius: 50%;
     box-sizing: border-box;
     border: 10px solid $--color;
-    $--left-pad: calc($--t - (4 * $--w));
+    $--left-pad: calc($--t - (4 * $--w ));
     left: calc(($--left-pad / 2) + ($--w / 2 - ($--c / 2)));
     top: calc(-50% + constant(safe-area-inset-bottom) / 2);
     top: calc(-50% + env(safe-area-inset-bottom) / 2);
@@ -111,8 +126,15 @@ const tabClick = (e, path) => {
     /* 添加过渡效果 */
     transition: all 0.5s;
     /* 设置选中偏移 */
-    transform: translateX(calc($--w * var(--n) + ($--w / 2)));
-
+    // transform: translateX(calc($--w * var(--n)));
+    transform: translateX(calc($--w * var(--n) + $--ww));
+    // @if $--isEven == 0 {
+    //   // transform: translateX(calc($--ww - $--ww))
+    //   transform: translateX(calc($--w * var(--n)));
+    //   // transform: translateX(calc($--w * var(--n)));
+    // } @else {
+    //   transform: translateX(calc($--w * var(--n) - $--ww));
+    // }
     /* 菜单选中圆形样式添加前后圆滑凹凸 */
     &::after,
     &::before {
