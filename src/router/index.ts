@@ -14,7 +14,7 @@ const routes: Array<RouteRecordRaw> = [
   // }
   {
     path: '/',
-    redirect: '/send',
+    redirect: '/receive',
     children: menus
   }
 ]

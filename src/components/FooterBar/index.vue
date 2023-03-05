@@ -25,6 +25,7 @@ const tabClick = (e, path) => {
   router.push(path)
 }
 onMounted(() => {
+  router.push('/receive')
   menus.forEach((v: Object) => {
     if (v?.meta?.TabbarShow) tabbarLen.value++
   });
@@ -55,7 +56,7 @@ onMounted(() => {
   /* 背景颜色 */
   $--color: #222;
   /* 菜单选中的背景色 */
-  $--bg: #1640cd;
+  $--bg: rgb(88,255,210);
   /* 设置底部安全距离 */
   background: #bcb8b8;
   width: 100%;

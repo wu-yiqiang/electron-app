@@ -97,7 +97,7 @@ export class Window {
         contextIsolation: false, //上下文隔离
         nodeIntegration: true, //启用Node集成（是否完整的支持 node）
         webSecurity: false,
-        preload: path.join(__dirname, "../electron-preload/index.js"),
+        // preload: path.join(__dirname, "../../electron-preload/index.ts"),
       },
     };
   }
@@ -224,68 +224,70 @@ export class Window {
   listen() {
     // 固定
     ipcMain.on('pinUp', (event: Event, winId) => {
-      event.preventDefault();
+      event.preventDefault()
       if (winId && (this.main as BrowserWindow).id == winId) {
-        let win: BrowserWindow = this.getWindow(Number((this.main as BrowserWindow).id));
+        let win: BrowserWindow = this.getWindow(Number((this.main as BrowserWindow).id))
         if (win.isAlwaysOnTop()) {
-          win.setAlwaysOnTop(false); // 取消置顶
+          win.setAlwaysOnTop(false) // 取消置顶
         } else {
-          win.setAlwaysOnTop(true); // 置顶
+          win.setAlwaysOnTop(true) // 置顶
         }
       }
     })
 
     // 隐藏
-    ipcMain.on("window-hide", (event, winId) => {
+    ipcMain.on('window-hide', (event, winId) => {
       if (winId) {
-        this.getWindow(Number(winId)).hide();
+        this.getWindow(Number(winId)).hide()
       } else {
         for (let i in this.group) {
-          if (this.group[i]) this.getWindow(Number(i)).hide();
+          if (this.group[i]) this.getWindow(Number(i)).hide()
         }
       }
-    });
+    })
 
     // 显示
-    ipcMain.on("window-show", (event, winId) => {
+    ipcMain.on('window-show', (event, winId) => {
       if (winId) {
-        this.getWindow(Number(winId)).show();
+        this.getWindow(Number(winId)).show()
       } else {
         for (let i in this.group) {
-          if (this.group[i]) this.getWindow(Number(i)).show();
+          if (this.group[i]) this.getWindow(Number(i)).show()
         }
       }
-    });
+    })
 
     // 最小化
-    ipcMain.on("mini", (event: Event, winId) => {
-      console.log("最小化窗口id", winId);
+    ipcMain.on('mini', (event: Event, winId) => {
+      console.log('最小化窗口id', winId)
       if (winId) {
-        this.getWindow(Number(winId)).minimize();
+        this.getWindow(Number(winId)).minimize()
       } else {
         for (let i in this.group) {
           if (this.group[i]) {
-            this.getWindow(Number(i)).minimize();
+            this.getWindow(Number(i)).minimize()
           }
         }
       }
-    });
+    })
 
     // 最大化
-    ipcMain.on("window-max", (event, winId) => {
+    ipcMain.on('window-max', (event, winId) => {
       if (winId) {
-        this.getWindow(Number(winId)).maximize();
+        this.getWindow(Number(winId)).maximize()
       } else {
-        for (let i in this.group)
-          if (this.group[i]) this.getWindow(Number(i)).maximize();
+        for (let i in this.group) if (this.group[i]) this.getWindow(Number(i)).maximize()
       }
-    });
+    })
 
     // 创建窗口
-    ipcMain.on("window-new", (event: Event, args) => this.createWindows(args));
-    // 窗口大小改变
-    ipcMain.on("resizeEvent", (event: Event, args) => {
+    ipcMain.on('window-new', (event: Event, args) => this.createWindows(args))
+
+    // 窗口大小改变重新渲染
+    ipcMain.on('resizeEvent', (event: Event, args) => {
+      console.log('asda')
+
       resizeEvent(args)
-    });
+    })
   }
 }

@@ -54,8 +54,7 @@ class Window {
       webPreferences: {
         contextIsolation: false,
         nodeIntegration: true,
-        webSecurity: false,
-        preload: path__default["default"].join(__dirname, "../electron-preload/index.js")
+        webSecurity: false
       }
     };
   }
@@ -208,6 +207,7 @@ class Window {
     });
     electron.ipcMain.on("window-new", (event, args) => this.createWindows(args));
     electron.ipcMain.on("resizeEvent", (event, args) => {
+      console.log("asda");
       resizeEvent(args);
     });
   }
