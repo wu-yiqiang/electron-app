@@ -2,7 +2,6 @@
   <input class="input-box" type="text" :value="value" />
 </template>
 <script lang="ts" setup>
-import { reactive, watch, computed, ref, defineProps } from 'vue'
 const props = defineProps({
   value: {
     type: [String, Number],

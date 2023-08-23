@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import { featureRouters } from "./featureRouters";
-export const menus: Array<RouteRecordRaw> = featureRouters
+export const menus: Array<any> = featureRouters
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',

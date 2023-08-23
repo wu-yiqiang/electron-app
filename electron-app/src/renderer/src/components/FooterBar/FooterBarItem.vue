@@ -7,7 +7,6 @@
 
 <script lang="ts" setup>
 import SvgIcon from '@/components/SvgIcon/index.vue'
-import { defineProps } from 'vue'
 const props = defineProps({
   titleName: {
     type: String,

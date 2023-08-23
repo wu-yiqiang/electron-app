@@ -13,10 +13,8 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import SvgIcon from '@/components/SvgIcon/index.vue'
-import { menus } from '@/router/index'
-import router from '@/router/index'
+import { menus } router from '@/router/index'
 const currIndex = ref(0)
-const newIndex = ref(0)
 let tabbarLen = ref(0)
 let isEven = ref(0)
 const tabClick = (e, path) => {

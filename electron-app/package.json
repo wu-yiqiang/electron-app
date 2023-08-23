@@ -1,9 +1,9 @@
 {
   "name": "local2send",
   "version": "1.0.0",
-  "description": "An Electron application with Vue and TypeScript",
+  "description": "local network send files",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "sutter",
   "homepage": "https://www.electronjs.org",
   "scripts": {
     "format": "prettier --write .",

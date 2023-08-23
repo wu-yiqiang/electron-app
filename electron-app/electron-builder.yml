@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: electron-app
+appId: com.local2send.app
+productName: local2send
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: electron-app
+  executableName: local2send
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -27,6 +27,7 @@ mac:
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   notarize: false
 dmg:
+  # icon: src/renderer/assets/local2send.png
   artifactName: ${name}-${version}.${ext}
 linux:
   target:

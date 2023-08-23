@@ -13,10 +13,11 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import SvgIcon from '@/components/SvgIcon/index.vue'
-import { menus } from '@/router/index'
-import router from '@/router/index'
+import { menus } from '../../router/index'
+import router from '../../router/index'
+import { RouterModel } from '../../router/RouterModels'
 const currIndex = ref(0)
-const newIndex = ref(0)
+
 let tabbarLen = ref(0)
 let isEven = ref(0)
 const tabClick = (e, path) => {
@@ -25,8 +26,8 @@ const tabClick = (e, path) => {
   router.push(path)
 }
 onMounted(() => {
-  router.push('/receive')
-  menus.forEach((v: Object) => {
+  // router.push('/receive')
+  menus.forEach((v: RouterModel) => {
     if (v?.meta?.TabbarShow) tabbarLen.value++
   });
   isEven.value = tabbarLen.value % 2
