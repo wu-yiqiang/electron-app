@@ -27,7 +27,6 @@ mac:
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   notarize: false
 dmg:
-  # icon: src/renderer/assets/local2send.png
   artifactName: ${name}-${version}.${ext}
 linux:
   target:

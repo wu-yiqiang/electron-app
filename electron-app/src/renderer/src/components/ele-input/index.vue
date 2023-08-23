@@ -14,7 +14,7 @@ defineProps({
 $--input-color: rgb(55, 71, 69);
 .input-box{
   color: #fff;
-  font-size: 16px;
+  font-size: $--fontSizeText14;
   background-color: $--input-color;
   border-radius: 5px;
   padding: 5px;

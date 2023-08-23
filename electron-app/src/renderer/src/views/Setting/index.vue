@@ -63,7 +63,7 @@ $--mainBoxBackgroundColor: rgb(48,54,53);
   @include scroll-bar-none();
   .title-box {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: $--fontSizeTitle16;
   }
   .setting-box {
     max-height: calc(100vh - 120px - 80px);
@@ -82,12 +82,12 @@ $--mainBoxBackgroundColor: rgb(48,54,53);
       .general-title,
       .recevice-title,
       .network-title {
-        font-size: 18px;
+        font-size: $--fontSizeTitle16;
       }
       .general-box-item,
       .recevice-box-item,
       .network-box-item {
-        font-size: 16px;
+        font-size: $--fontSizeText14;
         display: flex;
         justify-content: space-between;
         height: 40px;

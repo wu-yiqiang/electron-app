@@ -2,7 +2,7 @@
   <div class="tabbar-box" router>
     <div v-for="(menu, index) in menus" :key="index">
       <div v-if="menu.meta.TabbarShow" :class="['menu-item', currIndex == index && 'active']" @click="tabClick($event, menu.path)" :data-index="index">
-        <SvgIcon :name="menu.meta.icon" size="40" :color="currIndex == index ? '#fff' : ''" />
+        <SvgIcon :name="menu.meta.icon" size="30" :color="currIndex == index ? '#fff' : ''" />
         <span class="title-name-box">{{ menu.name }}</span>
       </div>
       <div class="active-tabbar-box" :style="{ '--n': currIndex }"></div>
@@ -53,7 +53,7 @@ onMounted(() => {
   /* 页面总宽度 */
   $--t: 100vw;
   /* 菜单选中的圆形背景宽度 */
-  $--c: 80px;
+  $--c: 60px;
   /* 背景颜色 */
   $--color: $--pageBackgroundColor;
   /* 菜单选中的背景色 */
@@ -61,7 +61,7 @@ onMounted(() => {
   /* 设置底部安全距离 */
   background: $--tabBarColor;
   width: 100%;
-  height: 80px;
+  height: 60px;
   border-radius: 10px 10px 0 0;
   display: flex;
   align-items: center;
@@ -76,11 +76,9 @@ onMounted(() => {
     /* 竖向垂直居中 */
     flex-direction: column;
     width: $--w;
-    height: 100%;
     position: relative;
-
     .svg-icon {
-      font-size: 40px;
+      font-size: 30px;
       /* 添加过渡效果 */
       transition: all 0.5s;
     }
@@ -89,7 +87,7 @@ onMounted(() => {
       font-weight: bold;
       color: #fff;
       position: absolute;
-      transform: translateY(50px);
+      transform: translateY(-30px);
       /* 添加过渡效果 */
       transition: all 0.5s;
       /* 设置默认不显示 */
@@ -101,11 +99,11 @@ onMounted(() => {
     /* 设置菜单选中样式 */
     .svg-icon {
       color: '#fff' !important;
-      transform: translateY(-40px);
+      transform: translateY(-30px);
     }
     .title-name-box {
       opacity: 1;
-      transform: translateY(22px);
+      transform: translateY(15px);
     }
   }
 
