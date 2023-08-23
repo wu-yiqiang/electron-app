@@ -1,5 +1,6 @@
 {
   "name": "local2send",
+  "author": "sutter",
   "private": true,
   "version": "1.0.0",
   "main": "dist/electron/index.js",
@@ -7,9 +8,9 @@
     "dev": "vite",
     "build": "rimraf dist && vite build && electron-builder",
     "preview": "vite preview",
-    "build-win": "vite build && electron-builder --win",
-    "build-linux": "vite build && electron-builder --linux",
-    "build-mac": "vite build && electron-builder --mac"
+    "build-win": "rimraf dist && vite build && electron-builder --win",
+    "build-linux": "rimraf dist && vite build && electron-builder --linux",
+    "build-mac": "rimraf dist && vite build && electron-builder --mac"
   },
   "dependencies": {
     "element-plus": "^2.2.30",
@@ -46,10 +47,10 @@
     ],
     "mac": {
       "icon": "./src/assets/local2send.png",
-      "name": "local2send",
-      "artifactName": "${productName}_${version}.${ext}",
       "target": [
-        "dmg"
+         {"target": [
+            "dmg"
+          ]}
       ]
     },
     "win": {
@@ -57,15 +58,13 @@
       "target": [
         {
           "target": [
-            "nsis",
-            "exe"
+            "nsis"
           ],
           "arch": [
             "x64"
           ]
         }
-      ],
-      "artifactName": "${productName}_${version}.${ext}"
+      ]
     },
     "nsis": {
       "oneClick": false,

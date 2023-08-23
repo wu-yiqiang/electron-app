@@ -263,16 +263,3 @@ electron.app.on("activate", () => {
 electron.app.on("ready", async () => {
   createWindow();
 });
-{
-  if (process.platform === "win32") {
-    process.on("message", (data) => {
-      if (data === "graceful-exit") {
-        electron.app.quit();
-      }
-    });
-  } else {
-    process.on("SIGTERM", () => {
-      electron.app.quit();
-    });
-  }
-}
