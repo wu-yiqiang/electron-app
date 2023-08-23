@@ -5,7 +5,7 @@ import {IWindowsCfg, IWindowOpt, IGroup} from '../type'
 
 export const windowsCfg: IWindowsCfg = {
   id: 1126, //唯一id
-  title: "local2Send", //窗口标题
+  title: "local2send", //窗口标题
   width: 400, //宽度
   height: 600, //高度
   minWidth: 400, //最小宽度

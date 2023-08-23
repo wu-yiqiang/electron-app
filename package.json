@@ -1,5 +1,5 @@
 {
-  "name": "local2Send",
+  "name": "local2send",
   "private": true,
   "version": "1.0.0",
   "main": "dist/electron/index.js",
@@ -45,7 +45,7 @@
       "dist"
     ],
     "mac": {
-      "icon": "./src/assets/local2Send.png",
+      "icon": "./src/assets/local2send.png",
       "name": "local2send",
       "artifactName": "${productName}_${version}.${ext}",
       "target": [
@@ -53,7 +53,7 @@
       ]
     },
     "win": {
-      "icon": "./src/assets/local2Send.png",
+      "icon": "./src/assets/local2send.png",
       "target": [
         {
           "target": [
