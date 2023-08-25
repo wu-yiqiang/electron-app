@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var e=require("./index.51e32eb7.js");const n={class:"index"},t=e.defineComponent({__name:"index",setup(o){return(r,s)=>(e.openBlock(),e.createElementBlock("section",n," vue3\u6A21\u677Fsend "))}});var _=e._export_sfc(t,[["__scopeId","data-v-54749a04"]]);exports.default=_;
