@@ -1,0 +1,160 @@
+@charset "UTF-8";
+*[data-v-4dc8ba09],
+*[data-v-4dc8ba09]::before,
+*[data-v-4dc8ba09]::after {
+  box-sizing: border-box;
+}
+*[data-v-4dc8ba09] {
+  padding: 0;
+  margin: 0;
+}
+body[data-v-4dc8ba09] {
+  font-size: 16px;
+  padding: 10px;
+  background: rgb(25, 25, 25);
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 设置水平垂直居中 */
+input[data-v-4dc8ba09] {
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 防止未加载完成显示undefined */
+[v-cloak][data-v-4dc8ba09] {
+  display: none;
+}
+
+/* 去掉button默认样式 */
+button[data-v-4dc8ba09] {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.input-box[data-v-4dc8ba09] {
+  color: #fff;
+  font-size: 14px;
+  background-color: rgb(55, 71, 69);
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+*[data-v-a3423576],
+*[data-v-a3423576]::before,
+*[data-v-a3423576]::after {
+  box-sizing: border-box;
+}
+*[data-v-a3423576] {
+  padding: 0;
+  margin: 0;
+}
+body[data-v-a3423576] {
+  font-size: 16px;
+  padding: 10px;
+  background: rgb(25, 25, 25);
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 设置水平垂直居中 */
+input[data-v-a3423576] {
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 防止未加载完成显示undefined */
+[v-cloak][data-v-a3423576] {
+  display: none;
+}
+
+/* 去掉button默认样式 */
+button[data-v-a3423576] {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.setting[data-v-a3423576] {
+  color: white;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scrollbar-width: none;
+}
+.setting[data-v-a3423576]::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.setting .title-box[data-v-a3423576] {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.setting .setting-box[data-v-a3423576] {
+  max-height: calc(100vh - 120px - 80px);
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.setting .setting-box[data-v-a3423576]::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.setting .setting-box .general-box[data-v-a3423576],
+.setting .setting-box .recevice-box[data-v-a3423576],
+.setting .setting-box .network-box[data-v-a3423576] {
+  width: 100%;
+  color: rgb(244, 244, 244);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(48, 54, 53);
+  margin-bottom: 20px;
+}
+.setting .setting-box .general-box .general-title[data-v-a3423576],
+.setting .setting-box .general-box .recevice-title[data-v-a3423576],
+.setting .setting-box .general-box .network-title[data-v-a3423576],
+.setting .setting-box .recevice-box .general-title[data-v-a3423576],
+.setting .setting-box .recevice-box .recevice-title[data-v-a3423576],
+.setting .setting-box .recevice-box .network-title[data-v-a3423576],
+.setting .setting-box .network-box .general-title[data-v-a3423576],
+.setting .setting-box .network-box .recevice-title[data-v-a3423576],
+.setting .setting-box .network-box .network-title[data-v-a3423576] {
+  font-size: 16px;
+}
+.setting .setting-box .general-box .general-box-item[data-v-a3423576],
+.setting .setting-box .general-box .recevice-box-item[data-v-a3423576],
+.setting .setting-box .general-box .network-box-item[data-v-a3423576],
+.setting .setting-box .recevice-box .general-box-item[data-v-a3423576],
+.setting .setting-box .recevice-box .recevice-box-item[data-v-a3423576],
+.setting .setting-box .recevice-box .network-box-item[data-v-a3423576],
+.setting .setting-box .network-box .general-box-item[data-v-a3423576],
+.setting .setting-box .network-box .recevice-box-item[data-v-a3423576],
+.setting .setting-box .network-box .network-box-item[data-v-a3423576] {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin: 10px 0;
+}
+.setting .setting-box .general-box .general-box-item .item-title[data-v-a3423576],
+.setting .setting-box .general-box .recevice-box-item .item-title[data-v-a3423576],
+.setting .setting-box .general-box .network-box-item .item-title[data-v-a3423576],
+.setting .setting-box .recevice-box .general-box-item .item-title[data-v-a3423576],
+.setting .setting-box .recevice-box .recevice-box-item .item-title[data-v-a3423576],
+.setting .setting-box .recevice-box .network-box-item .item-title[data-v-a3423576],
+.setting .setting-box .network-box .general-box-item .item-title[data-v-a3423576],
+.setting .setting-box .network-box .recevice-box-item .item-title[data-v-a3423576],
+.setting .setting-box .network-box .network-box-item .item-title[data-v-a3423576] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

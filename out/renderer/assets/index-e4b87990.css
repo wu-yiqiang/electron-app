@@ -1,0 +1,38 @@
+@charset "UTF-8";
+*[data-v-fd637f20],
+*[data-v-fd637f20]::before,
+*[data-v-fd637f20]::after {
+  box-sizing: border-box;
+}
+*[data-v-fd637f20] {
+  padding: 0;
+  margin: 0;
+}
+body[data-v-fd637f20] {
+  font-size: 16px;
+  padding: 10px;
+  background: rgb(25, 25, 25);
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 设置水平垂直居中 */
+input[data-v-fd637f20] {
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 防止未加载完成显示undefined */
+[v-cloak][data-v-fd637f20] {
+  display: none;
+}
+
+/* 去掉button默认样式 */
+button[data-v-fd637f20] {
+  border: none;
+  background: transparent;
+  outline: none;
+}

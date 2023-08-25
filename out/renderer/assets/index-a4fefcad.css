@@ -1,0 +1,143 @@
+@charset "UTF-8";
+.svg-icon[data-v-b68d8272] {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 16px;
+  padding: 10px;
+  background: rgb(25, 25, 25);
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* 设置水平垂直居中 */
+input {
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 防止未加载完成显示undefined */
+[v-cloak] {
+  display: none;
+}
+
+/* 去掉button默认样式 */
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.tabbar-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  /* 导航栏个数 */
+  /* 每个菜单的宽度 */
+  /* 每个菜单的宽度的一半 */
+  /* 奇偶数 */
+  /* 页面总宽度 */
+  /* 菜单选中的圆形背景宽度 */
+  /* 背景颜色 */
+  /* 菜单选中的背景色 */
+  /* 设置底部安全距离 */
+  background: rgb(48, 54, 53);
+  width: 100%;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 设置ios底部安全距离 */
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  /* 菜单选中圆形样式 */
+}
+.tabbar-box .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 竖向垂直居中 */
+  flex-direction: column;
+  width: calc(100vw / var(--00883c03));
+  position: relative;
+}
+.tabbar-box .menu-item .svg-icon {
+  font-size: 30px;
+  /* 添加过渡效果 */
+  transition: all 0.5s;
+}
+.tabbar-box .menu-item .title-name-box {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  transform: translateY(-30px);
+  /* 添加过渡效果 */
+  transition: all 0.5s;
+  /* 设置默认不显示 */
+  opacity: 0;
+}
+.tabbar-box .active {
+  /* 设置菜单选中样式 */
+}
+.tabbar-box .active .svg-icon {
+  color: "#fff" !important;
+  transform: translateY(-30px);
+}
+.tabbar-box .active .title-name-box {
+  opacity: 1;
+  transform: translateY(15px);
+}
+.tabbar-box .active-tabbar-box {
+  width: 60px;
+  height: 60px;
+  background: rgb(48, 54, 53);
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 10px solid rgb(25, 25, 25);
+  left: calc((100vw - 4 * 100vw / var(--00883c03)) / 2 + 100vw / var(--00883c03) / 2 - 30px);
+  top: calc(-50% + constant(safe-area-inset-bottom) / 2);
+  top: calc(-50% + env(safe-area-inset-bottom) / 2);
+  z-index: -1;
+  /* 添加过渡效果 */
+  transition: all 0.5s;
+  /* 设置选中偏移 */
+  transform: translateX(calc(100vw / var(--00883c03) * var(--n) + 100vw / var(--00883c03) / 2));
+  /* 菜单选中圆形样式添加前后圆滑凹凸 */
+}
+.tabbar-box .active-tabbar-box::after, .tabbar-box .active-tabbar-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+}
+.tabbar-box .active-tabbar-box::before {
+  left: -33px;
+  border-radius: 0 30px 0 0;
+  box-shadow: 0 -15px 0 0 rgb(25, 25, 25);
+}
+.tabbar-box .active-tabbar-box::after {
+  right: -33px;
+  border-radius: 30px 0 0 0;
+  box-shadow: 0 -15px 0 0 rgb(25, 25, 25);
+}

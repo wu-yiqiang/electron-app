@@ -1,0 +1,15 @@
+// font
+$--fontSizeTitle18: 18px;
+$--fontSizeTitle16: 16px;
+$--fontSizeText16: 16px;
+$--fontSizeText14: 14px;
+// spacing
+$--pagePadding: 10px;
+$--footerbar-height: 120px;
+$--footerbar-logo-height: 60px;
+$--footer-height: calc($--footerbar-height + calc($--footerbar-logo-height / 2));
+// color
+$--pageBackgroundColor: rgb(25, 25, 25);
+$--tabBarColor: rgb(48, 54, 53);
+$--tabBarActiveColor: rgb(56, 71, 69);
+$--input-background-color: rgb(55, 71, 69);

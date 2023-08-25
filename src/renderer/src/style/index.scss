@@ -1,0 +1,40 @@
+@import "./variable.scss";
+@import './mixin.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  @include scroll-bar-none();
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  @include scroll-bar-none();
+}
+
+
+
+/* 设置水平垂直居中 */
+input {
+  background: none;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 防止未加载完成显示undefined */
+[v-cloak] {
+  display: none;
+}

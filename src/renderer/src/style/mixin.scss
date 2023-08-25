@@ -1,0 +1,16 @@
+// flex盒子居中
+@mixin box-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// 清除滚动条
+@mixin scroll-bar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
